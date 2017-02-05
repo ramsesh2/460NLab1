@@ -91,8 +91,9 @@ int toNum( char * pStr ){
 }
 
 int isOpcode(char* rawOpcode){
-	for(int i = 0; i < 28; i += 1){
-		if(strcmp(rawOpcode, Opcodes[i]) == 0){return i;}
+	int j;
+	for(j = 0; j < 28; j += 1){
+		if(strcmp(rawOpcode, Opcodes[j]) == 0){return j;}
 	}
 	return -1;
 }
@@ -146,7 +147,7 @@ void pass2(void){
 }
 
  int main(int argc, char* argv[]) {
-	 printf("%d\n", isOpcode("and"));
+	 printf("%d\n", isOpcode("add"));
 	 printf("%d\n", isOpcode("snot"));
 	 printf("%d\n", isOpcode("rshfl"));
 	 printf("%d\n", isOpcode("brnz"));
